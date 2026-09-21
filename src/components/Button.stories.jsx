@@ -3,6 +3,7 @@ import { Button } from "./Button.jsx";
 const meta = {
   title: "Components/Button",
   component: Button,
+  tags: ["autodocs"],
   args: {
     title: "Press me"
   }
