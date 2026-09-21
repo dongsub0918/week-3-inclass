@@ -1,0 +1,49 @@
+{
+  "name": "week-3-inclass",
+  "version": "1.0.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "react-native": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongsub0918/Week-3-inclass.git"
+  },
+  "homepage": "https://github.com/dongsub0918/Week-3-inclass#readme",
+  "scripts": {
+    "build:code": "tsup src/index.js --format esm,cjs --sourcemap --clean --external react --external react-native",
+    "build:types": "tsc -p jsconfig.build.json",
+    "build": "npm run build:code && npm run build:types",
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-native": "^0.84.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/react-vite": "^10.6.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-native-web": "^0.21.2",
+    "storybook": "^10.6.0",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.6",
+    "vitest": "^3.2.7"
+  }
+}
