@@ -19,6 +19,7 @@
     "build:code": "tsup src/index.js --format esm,cjs --sourcemap --clean --external react --external react-native",
     "build:types": "tsc -p jsconfig.build.json",
     "build": "npm run build:code && npm run build:types",
+    "verify": "npm run build",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
