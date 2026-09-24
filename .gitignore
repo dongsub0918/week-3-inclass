@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Generated library and Storybook output
-dist/
+# Generated library output is committed (see dist/) so `github:` installs
+# resolve without a build step. Storybook demo output stays generated-only.
 storybook-static/
 
 # Test output

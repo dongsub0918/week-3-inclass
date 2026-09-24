@@ -1,3 +1,4 @@
+import react from "@vitejs/plugin-react";
 import { mergeConfig } from "vite";
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
@@ -6,21 +7,23 @@ const config = {
   stories: ["../docs/**/*.mdx", "../src/**/*.stories.@(js|jsx)"],
   addons: ["@storybook/addon-docs", "@storybook/addon-a11y"],
   docs: {
-    autodocs: true
+    autodocs: true,
   },
   async viteFinal(viteConfig) {
     return mergeConfig(viteConfig, {
-      base: process.env.STORYBOOK_BASE_PATH ?? process.env.STORYBOOK_BASE ?? "/",
+      plugins: [react()],
+      base:
+        process.env.STORYBOOK_BASE_PATH ?? process.env.STORYBOOK_BASE ?? "/",
       define: {
-        global: "globalThis"
+        global: "globalThis",
       },
       resolve: {
         alias: {
-          "react-native": "react-native-web"
-        }
-      }
+          "react-native": "react-native-web",
+        },
+      },
     });
-  }
+  },
 };
 
 export default config;
