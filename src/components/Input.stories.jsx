@@ -1,31 +1,27 @@
-import { Button } from "./Button.jsx";
+import { Input } from "./Input.jsx";
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Input",
+  component: Input,
   tags: ["autodocs"],
   args: {
-    title: "Save",
     variant: "primary",
     disabled: false
   },
 
   argTypes: {
-    title: {
+    value: {
       control: 'text',
     },
     variant: {
       control: 'inline-radio',
-      options: ['primary', 'secondary', 'warning', 'danger'],
+      options: ['primary', 'secondary', 'complete', 'danger'],
     },
     disabled: {
       control: 'boolean',
     },
-    onPress: {
-      action: 'pressed',
-      table: {
-        disable: true,
-      },
+    onChangeText: {
+      action: 'changed',
     },
   },
 };
@@ -35,7 +31,6 @@ export default meta;
 export const Primary = {
   args: {
     variant: 'primary',
-    onPress: () => alert("Button pressed")
   }
 };
 
@@ -46,9 +41,9 @@ export const Secondary = {
   },
 };
 
-export const Warning = {
+export const Complete = {
   args: {
-    variant: 'warning',
+    variant: 'complete',
   },
 };
 

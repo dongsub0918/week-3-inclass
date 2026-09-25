@@ -1,19 +1,15 @@
-import { Button } from "./Button.jsx";
+import { Tab } from "./Tab.jsx";
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Tab",
+  component: Tab,
   tags: ["autodocs"],
   args: {
-    title: "Save",
     variant: "primary",
-    disabled: false
+    disabled: false,
   },
 
   argTypes: {
-    title: {
-      control: 'text',
-    },
     variant: {
       control: 'inline-radio',
       options: ['primary', 'secondary', 'warning', 'danger'],
@@ -35,14 +31,13 @@ export default meta;
 export const Primary = {
   args: {
     variant: 'primary',
-    onPress: () => alert("Button pressed")
   }
 };
 
 export const Secondary = {
   args: {
     variant: 'secondary',
-    disabled: true
+    disabled: false,
   },
 };
 

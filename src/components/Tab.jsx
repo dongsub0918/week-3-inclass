@@ -1,13 +1,13 @@
-import { Pressable, StyleSheet, Text } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
+{/* import icon here */}
 
-export function Button({ title, onPress, variant = 'primary', disabled = false }) {
-
+export function Tab({ onPress, variant = 'primary', disabled = false }) {
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled}
       style ={({ pressed }) => [
-        styles.button,
+        styles.icon,
         variant === "primary" && styles.primary,
         variant === "secondary" && styles.secondary,
         variant === "warning" && styles.warning,
@@ -15,16 +15,8 @@ export function Button({ title, onPress, variant = 'primary', disabled = false }
         pressed && styles.pressed,
         disabled && styles.disabled,
       ]}
-    >
-      <Text 
-        style={[ 
-          styles.buttonText,
-          variant === "primary" && styles.primary_dangerText,
-          variant === "secondary" && styles.secondary_warningText,
-          variant === "warning" && styles.secondary_warningText,
-          variant === "danger" && styles.primary_dangerText,]
-        }>{title}
-      </Text>
+    > 
+      {/* Add profile icon here */}
     </Pressable>
   );
 }
@@ -39,23 +31,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonText: {
-    fontFamily: "Inter_700Bold",
-    fontSize: 16,
-    lineHeight: 24
-  },
-  primary_dangerText: {
-    color: "#fff"
-  },
-  secondary_warningText: {
-    color: "#171717"
-  },
-  button: {
+  icon: {
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: 40,
-    minWidth: 100,
+    height: 40,
+    width: 40,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 0,
@@ -64,16 +45,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#171717"
   },
   secondary: {
-    backgroundColor: "#fff",
-    borderColor: "#ACACAC",
-    borderRadius: 8,
-    borderWidth: 2,
+    backgroundColor: "#ACACAC",
   },
   warning: {
     backgroundColor: "#FFBC00"
   },
   danger: {
     backgroundColor: "#f0173A"
+  },
+  primary_danger_icon: {
+    color: "#fff"
+  },
+  secondary_warning_icon: {
+    color: "#171717"
   },
   pressed: {
     opacity: 0.78,
