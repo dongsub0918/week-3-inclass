@@ -291,10 +291,10 @@ var styles4 = StyleSheet4.create({
     paddingVertical: 0
   },
   primary: {
-    backgroundColor: "#D9D9D9"
+    backgroundColor: "#000000"
   },
   secondary: {
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#ACACAC"
   },
   warning: {
     backgroundColor: "#FFBC00"

@@ -9,7 +9,7 @@ const meta = {
     variant: "primary",
     disabled: false,
     style: {},
-    children: <Text style={{ color: '#171717' }}>Tab</Text>,
+    children: <Text style={{ color: '#FFFFFF' }}>Tab</Text>,
   },
 
   argTypes: {
