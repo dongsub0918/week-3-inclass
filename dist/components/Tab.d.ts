@@ -1,6 +1,5 @@
-export declare function Button({ title, onPress, variant, disabled }: {
+export declare function Tab({ onPress, variant, disabled }: {
     disabled?: boolean | undefined;
     onPress: any;
-    title: any;
     variant?: string | undefined;
 }): any;
