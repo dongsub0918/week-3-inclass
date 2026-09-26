@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "left",
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Inter_400Regular",
     fontSize: 16,
     lineHeight: 24,
     color: "#000000"
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   sublineText: {
     color: "#5B5B5B",
     textAlign: "left",
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Inter_400Regular",
     fontSize: 10,
     lineHeight: 12,
   },

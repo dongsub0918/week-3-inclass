@@ -42,26 +42,26 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: "Inter_700Bold",
     fontSize: 16,
-    lineHeight: 24
+    lineHeight: 24,
+    textAlign: "center",
   },
   primary_dangerText: {
     color: "#fff"
   },
   secondary_warningText: {
-    color: "#171717"
+    color: "#000000",
   },
   button: {
-    alignSelf: "center",
+    alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: 40,
-    minWidth: 100,
+    height: 40,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 0,
   },
   primary: {
-    backgroundColor: "#171717"
+    backgroundColor: "#000000"
   },
   secondary: {
     backgroundColor: "#fff",

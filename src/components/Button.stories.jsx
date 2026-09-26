@@ -35,6 +35,7 @@ export default meta;
 export const Primary = {
   args: {
     variant: 'primary',
+    title: 'Primary',
     onPress: () => alert("Button pressed")
   }
 };
@@ -42,6 +43,7 @@ export const Primary = {
 export const Secondary = {
   args: {
     variant: 'secondary',
+    title: 'Secondary',
     disabled: true
   },
 };
@@ -49,11 +51,13 @@ export const Secondary = {
 export const Warning = {
   args: {
     variant: 'warning',
+    title: 'Warning',
   },
 };
 
 export const Danger = {
   args: {
     variant: 'danger',
+    title: 'Danger',
   },
 };

@@ -5,14 +5,18 @@ const meta = {
   component: List,
   tags: ["autodocs"],
   args: {
-    text: "Add text",
+    text: "One-line",
     variant: "one-line",
-    disabled: false
+    disabled: false,
+    subline: "Subline",
   },
 
   argTypes: {
     text: {
       control: 'text',
+    },
+    subline: {
+      control: "text",
     },
     variant: {
       control: 'inline-radio',
@@ -35,19 +39,21 @@ export const OneLine = {
 export const Bullet = {
   args: {
     variant: 'bullet',
-    disabled: true
+    text: "One-line with bullet point"
   },
 };
 
 export const DoubleLine = {
   args: {
     variant: 'double-line',
-    subline: "Smaller text",
+    text: "Double-line",
+    subline: "Subline",
   },
 };
 
 export const Link = {
   args: {
     variant: 'link',
+    text: "Link",
   },
 };

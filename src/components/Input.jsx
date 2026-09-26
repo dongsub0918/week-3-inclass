@@ -1,11 +1,17 @@
 import { View } from "react-native";
 import { StyleSheet, Text, TextInput } from "react-native";
 
-export function Input({ variant = 'primary', disabled = false, value, onChangeText }) {
+export function Input({ 
+  variant = 'primary', 
+  disabled = false, 
+  value, 
+  onChangeText, 
+  placeholder = "Enter Name" 
+}) {
     return (
         <View style={styles.fieldGroup}>
-            <Text style={[styles.title]}>
-            </Text>Name
+            <Text style={[styles.title]}>Name
+            </Text>
             <TextInput
                 style={[ 
                     styles.text_box,
@@ -13,13 +19,20 @@ export function Input({ variant = 'primary', disabled = false, value, onChangeTe
                     variant === "secondary" && styles.secondary,
                     variant === "complete" && styles.complete,
                     variant === "danger" && styles.danger,
+                    disabled && styles.disabled,
                     ]
                 }
                 value={value}
                 onChangeText={onChangeText}
-                disabled={disabled}
-                placeholder="Enter Name"
-                textAlignVertical="top"
+                placeholder={placeholder}
+                placeholderTextColor={
+                  variant === "primary" ? styles.primary.color :
+                  variant === "secondary" ? styles.secondary.color :
+                  variant === "complete" ? styles.complete.color :
+                  styles.danger.color
+                }
+                editable={!disabled}
+                textAlignVertical="center"
             />
         </View>
     );
@@ -36,25 +49,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 26,
-    fontWeight: "700",
+    fontSize: 16,
   },
   fieldGroup: {
     gap: 8,
   },
   text_box: {
-    borderRadius: 8,
+    borderRadius: 4,
     borderWidth: 2,
     fontFamily: "Inter_400Regular",
     fontSize: 16,
     lineHeight: 24,
-    minHeight: 56,
+    height: 40,
     maxWidth: 400,
     width: "100%",
-    paddingHorizontal: 16,
+    paddingHorizontal: 8,
     marginBottom: 16,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingVertical: 0,
   },
   primary: {
     color: "#171717",
@@ -72,18 +83,6 @@ const styles = StyleSheet.create({
     color: "#f0173A",
     borderColor: "#f0173A",
   },
-//   primary_text: {
-//     color: "#171717",
-//   },
-//   secondary_text: {
-//     color: "#ACACAC",
-//   },
-//   complete_text: {
-//     color: "#17c33c",
-//   },
-//   danger_text: {
-//     color: "#f0173A",
-//   },
   disabled: {
     opacity: 0.45,
   },

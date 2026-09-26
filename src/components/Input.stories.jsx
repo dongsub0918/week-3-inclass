@@ -6,11 +6,16 @@ const meta = {
   tags: ["autodocs"],
   args: {
     variant: "primary",
-    disabled: false
+    disabled: false,
+    placeholder: "Enter name",
+    value: "",
   },
 
   argTypes: {
     value: {
+      control: 'text',
+    },
+    placeholder: {
       control: 'text',
     },
     variant: {
@@ -31,12 +36,16 @@ export default meta;
 export const Primary = {
   args: {
     variant: 'primary',
+    value: "",
+    disabled: false,
   }
 };
 
 export const Secondary = {
   args: {
     variant: 'secondary',
+    value: "Jason Miller",
+    placeholder: "",
     disabled: true
   },
 };
@@ -44,11 +53,17 @@ export const Secondary = {
 export const Complete = {
   args: {
     variant: 'complete',
+    value: "Thanks!",
+    placeholder: "",
+    disabled: false,
   },
 };
 
 export const Danger = {
   args: {
     variant: 'danger',
+    value: "",
+    placeholder: "Please enter your name",
+    disabled: false,
   },
 };
