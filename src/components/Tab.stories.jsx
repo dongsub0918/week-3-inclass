@@ -1,4 +1,5 @@
 import { Tab } from "./Tab.jsx";
+import { Text } from "react-native";
 
 const meta = {
   title: "Components/Tab",
@@ -8,6 +9,7 @@ const meta = {
     variant: "primary",
     disabled: false,
     style: {},
+    children: <Text style={{ color: '#171717' }}>Tab</Text>,
   },
 
   argTypes: {
@@ -21,6 +23,10 @@ const meta = {
     style: {
       control: 'object',
       description: 'Styles applied to the tab container. These override the component defaults.',
+    },
+    children: {
+      control: false,
+      description: 'Content rendered inside the tab, such as an icon and label.',
     },
     onPress: {
       action: 'pressed',
@@ -43,18 +49,21 @@ export const Secondary = {
   args: {
     variant: 'secondary',
     disabled: false,
+    children: <Text style={{ color: '#171717' }}>Tab</Text>,
   },
 };
 
 export const Warning = {
   args: {
     variant: 'warning',
+    children: <Text style={{ color: '#171717' }}>Tab</Text>,
   },
 };
 
 export const Danger = {
   args: {
     variant: 'danger',
+    children: <Text style={{ color: '#FFFFFF' }}>Tab</Text>,
   },
 };
 

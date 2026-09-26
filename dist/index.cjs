@@ -279,9 +279,7 @@ var styles3 = import_react_native4.StyleSheet.create({
 // src/components/Tab.jsx
 var import_react_native5 = require("react-native");
 var import_jsx_runtime4 = require("react/jsx-runtime");
-{
-}
-function Tab({ onPress, variant = "primary", disabled = false, style }) {
+function Tab({ children, onPress, variant = "primary", disabled = false, style }) {
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
     import_react_native5.Pressable,
     {
@@ -296,7 +294,8 @@ function Tab({ onPress, variant = "primary", disabled = false, style }) {
         pressed && styles4.pressed,
         disabled && styles4.disabled,
         style
-      ]
+      ],
+      children
     }
   );
 }
@@ -321,22 +320,16 @@ var styles4 = import_react_native5.StyleSheet.create({
     paddingVertical: 0
   },
   primary: {
-    backgroundColor: "#171717"
+    backgroundColor: "#D9D9D9"
   },
   secondary: {
-    backgroundColor: "#ACACAC"
+    backgroundColor: "#FFFFFF"
   },
   warning: {
     backgroundColor: "#FFBC00"
   },
   danger: {
     backgroundColor: "#f0173A"
-  },
-  primary_danger_icon: {
-    color: "#fff"
-  },
-  secondary_warning_icon: {
-    color: "#171717"
   },
   pressed: {
     opacity: 0.78

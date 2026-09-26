@@ -1,7 +1,6 @@
 import { Pressable, StyleSheet } from "react-native";
-{/* import icon here */}
 
-export function Tab({ onPress, variant = 'primary', disabled = false, style }) {
+export function Tab({ children, onPress, variant = 'primary', disabled = false, style }) {
   return (
     <Pressable
       onPress={onPress}
@@ -16,8 +15,8 @@ export function Tab({ onPress, variant = 'primary', disabled = false, style }) {
         disabled && styles.disabled,
         style,
       ]}
-    > 
-      {/* Add profile icon here */}
+    >
+      {children}
     </Pressable>
   );
 }
@@ -43,22 +42,16 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
   },
   primary: {
-    backgroundColor: "#171717"
+    backgroundColor: "#D9D9D9"
   },
   secondary: {
-    backgroundColor: "#ACACAC",
+    backgroundColor: "#FFFFFF",
   },
   warning: {
     backgroundColor: "#FFBC00"
   },
   danger: {
     backgroundColor: "#f0173A"
-  },
-  primary_danger_icon: {
-    color: "#fff"
-  },
-  secondary_warning_icon: {
-    color: "#171717"
   },
   pressed: {
     opacity: 0.78,

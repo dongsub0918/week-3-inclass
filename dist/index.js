@@ -250,9 +250,7 @@ var styles3 = StyleSheet3.create({
 // src/components/Tab.jsx
 import { Pressable as Pressable3, StyleSheet as StyleSheet4 } from "react-native";
 import { jsx as jsx4 } from "react/jsx-runtime";
-{
-}
-function Tab({ onPress, variant = "primary", disabled = false, style }) {
+function Tab({ children, onPress, variant = "primary", disabled = false, style }) {
   return /* @__PURE__ */ jsx4(
     Pressable3,
     {
@@ -267,7 +265,8 @@ function Tab({ onPress, variant = "primary", disabled = false, style }) {
         pressed && styles4.pressed,
         disabled && styles4.disabled,
         style
-      ]
+      ],
+      children
     }
   );
 }
@@ -292,22 +291,16 @@ var styles4 = StyleSheet4.create({
     paddingVertical: 0
   },
   primary: {
-    backgroundColor: "#171717"
+    backgroundColor: "#D9D9D9"
   },
   secondary: {
-    backgroundColor: "#ACACAC"
+    backgroundColor: "#FFFFFF"
   },
   warning: {
     backgroundColor: "#FFBC00"
   },
   danger: {
     backgroundColor: "#f0173A"
-  },
-  primary_danger_icon: {
-    color: "#fff"
-  },
-  secondary_warning_icon: {
-    color: "#171717"
   },
   pressed: {
     opacity: 0.78
