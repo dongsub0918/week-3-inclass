@@ -7,7 +7,8 @@ const meta = {
   args: {
     title: "Save",
     variant: "primary",
-    disabled: false
+    disabled: false,
+    style: {},
   },
 
   argTypes: {
@@ -20,6 +21,10 @@ const meta = {
     },
     disabled: {
       control: 'boolean',
+    },
+    style: {
+      control: 'object',
+      description: 'Styles applied to the button container. These override the component defaults.',
     },
     onPress: {
       action: 'pressed',
@@ -59,5 +64,12 @@ export const Danger = {
   args: {
     variant: 'danger',
     title: 'Danger',
+  },
+};
+
+export const CustomStyle = {
+  args: {
+    title: 'Custom style',
+    style: { height: 56, paddingHorizontal: 20 },
   },
 };

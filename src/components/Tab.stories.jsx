@@ -7,6 +7,7 @@ const meta = {
   args: {
     variant: "primary",
     disabled: false,
+    style: {},
   },
 
   argTypes: {
@@ -16,6 +17,10 @@ const meta = {
     },
     disabled: {
       control: 'boolean',
+    },
+    style: {
+      control: 'object',
+      description: 'Styles applied to the tab container. These override the component defaults.',
     },
     onPress: {
       action: 'pressed',
@@ -50,5 +55,11 @@ export const Warning = {
 export const Danger = {
   args: {
     variant: 'danger',
+  },
+};
+
+export const CustomStyle = {
+  args: {
+    style: { width: 56, height: 56, borderRadius: 28 },
   },
 };

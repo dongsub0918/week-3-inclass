@@ -9,6 +9,7 @@ const meta = {
     variant: "one-line",
     disabled: false,
     subline: "Subline",
+    style: {},
   },
 
   argTypes: {
@@ -24,6 +25,10 @@ const meta = {
     },
     disabled: {
       control: 'boolean',
+    },
+    style: {
+      control: 'object',
+      description: 'Styles applied to the list item container. These override the component defaults.',
     },
   },
 };
@@ -55,5 +60,12 @@ export const Link = {
   args: {
     variant: 'link',
     text: "Link",
+  },
+};
+
+export const CustomStyle = {
+  args: {
+    text: 'Custom style',
+    style: { backgroundColor: '#EEEEEE', paddingVertical: 16 },
   },
 };
