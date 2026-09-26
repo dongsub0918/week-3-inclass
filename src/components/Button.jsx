@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
-export function Button({ title, onPress, variant = 'primary', disabled = false }) {
+export function Button({ title, onPress, variant = 'primary', disabled = false, style }) {
 
   return (
     <Pressable
@@ -14,6 +14,7 @@ export function Button({ title, onPress, variant = 'primary', disabled = false }
         variant === "danger" && styles.danger,
         pressed && styles.pressed,
         disabled && styles.disabled,
+        style,
       ]}
     >
       <Text 

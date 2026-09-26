@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
-export function List({ text, subline, variant = 'one-line', disabled = false }) {
+export function List({ text, subline, variant = 'one-line', disabled = false, style }) {
 
   return (
     <Pressable
@@ -12,6 +12,7 @@ export function List({ text, subline, variant = 'one-line', disabled = false }) 
         variant === "double-line" && styles.doubleLine,
         variant === "link" && styles.link,
         disabled && styles.disabled,
+        style,
       ]}
     >
       <Text style=

@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet } from "react-native";
 {/* import icon here */}
 
-export function Tab({ onPress, variant = 'primary', disabled = false }) {
+export function Tab({ onPress, variant = 'primary', disabled = false, style }) {
   return (
     <Pressable
       onPress={onPress}
@@ -14,6 +14,7 @@ export function Tab({ onPress, variant = 'primary', disabled = false }) {
         variant === "danger" && styles.danger,
         pressed && styles.pressed,
         disabled && styles.disabled,
+        style,
       ]}
     > 
       {/* Add profile icon here */}

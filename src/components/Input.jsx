@@ -6,7 +6,8 @@ export function Input({
   disabled = false, 
   value, 
   onChangeText, 
-  placeholder = "Enter Name" 
+  placeholder = "Enter Name",
+  style,
 }) {
     return (
         <View style={styles.fieldGroup}>
@@ -20,6 +21,7 @@ export function Input({
                     variant === "complete" && styles.complete,
                     variant === "danger" && styles.danger,
                     disabled && styles.disabled,
+                    style,
                     ]
                 }
                 value={value}

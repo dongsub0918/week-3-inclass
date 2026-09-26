@@ -1,7 +1,8 @@
 // src/components/Button.jsx
 import { Pressable, StyleSheet, Text } from "react-native";
-function Button({ title, onPress, variant = "primary", disabled = false }) {
-  return /* @__PURE__ */ React.createElement(
+import { jsx } from "react/jsx-runtime";
+function Button({ title, onPress, variant = "primary", disabled = false, style }) {
+  return /* @__PURE__ */ jsx(
     Pressable,
     {
       onPress,
@@ -13,22 +14,23 @@ function Button({ title, onPress, variant = "primary", disabled = false }) {
         variant === "warning" && styles.warning,
         variant === "danger" && styles.danger,
         pressed && styles.pressed,
-        disabled && styles.disabled
-      ]
-    },
-    /* @__PURE__ */ React.createElement(
-      Text,
-      {
-        style: [
-          styles.buttonText,
-          variant === "primary" && styles.primary_dangerText,
-          variant === "secondary" && styles.secondary_warningText,
-          variant === "warning" && styles.secondary_warningText,
-          variant === "danger" && styles.primary_dangerText
-        ]
-      },
-      title
-    )
+        disabled && styles.disabled,
+        style
+      ],
+      children: /* @__PURE__ */ jsx(
+        Text,
+        {
+          style: [
+            styles.buttonText,
+            variant === "primary" && styles.primary_dangerText,
+            variant === "secondary" && styles.secondary_warningText,
+            variant === "warning" && styles.secondary_warningText,
+            variant === "danger" && styles.primary_dangerText
+          ],
+          children: title
+        }
+      )
+    }
   );
 }
 var styles = StyleSheet.create({

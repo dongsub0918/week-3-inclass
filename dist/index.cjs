@@ -26,8 +26,9 @@ module.exports = __toCommonJS(index_exports);
 
 // src/components/Button.jsx
 var import_react_native = require("react-native");
-function Button({ title, onPress, variant = "primary", disabled = false }) {
-  return /* @__PURE__ */ React.createElement(
+var import_jsx_runtime = require("react/jsx-runtime");
+function Button({ title, onPress, variant = "primary", disabled = false, style }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
     import_react_native.Pressable,
     {
       onPress,
@@ -39,22 +40,23 @@ function Button({ title, onPress, variant = "primary", disabled = false }) {
         variant === "warning" && styles.warning,
         variant === "danger" && styles.danger,
         pressed && styles.pressed,
-        disabled && styles.disabled
-      ]
-    },
-    /* @__PURE__ */ React.createElement(
-      import_react_native.Text,
-      {
-        style: [
-          styles.buttonText,
-          variant === "primary" && styles.primary_dangerText,
-          variant === "secondary" && styles.secondary_warningText,
-          variant === "warning" && styles.secondary_warningText,
-          variant === "danger" && styles.primary_dangerText
-        ]
-      },
-      title
-    )
+        disabled && styles.disabled,
+        style
+      ],
+      children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        import_react_native.Text,
+        {
+          style: [
+            styles.buttonText,
+            variant === "primary" && styles.primary_dangerText,
+            variant === "secondary" && styles.secondary_warningText,
+            variant === "warning" && styles.secondary_warningText,
+            variant === "danger" && styles.primary_dangerText
+          ],
+          children: title
+        }
+      )
+    }
   );
 }
 var styles = import_react_native.StyleSheet.create({
