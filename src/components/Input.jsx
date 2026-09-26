@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     height: 40,
-    maxWidth: 400,
     width: "100%",
     paddingHorizontal: 8,
     marginBottom: 16,
