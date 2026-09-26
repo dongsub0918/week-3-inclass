@@ -49,7 +49,7 @@ export const Secondary = {
   args: {
     variant: 'secondary',
     title: 'Secondary',
-    disabled: true
+    disabled: false,
   },
 };
 

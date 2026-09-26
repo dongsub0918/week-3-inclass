@@ -73,8 +73,8 @@ var styles = import_react_native.StyleSheet.create({
     justifyContent: "center"
   },
   buttonText: {
-    fontFamily: "Inter_700Bold",
     fontSize: 16,
+    fontWeight: "700",
     lineHeight: 24,
     textAlign: "center"
   },
@@ -106,7 +106,7 @@ var styles = import_react_native.StyleSheet.create({
     backgroundColor: "#FFBC00"
   },
   danger: {
-    backgroundColor: "#f0173A"
+    backgroundColor: "#F0173A"
   },
   pressed: {
     opacity: 0.78
